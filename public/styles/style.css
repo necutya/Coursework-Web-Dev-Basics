@@ -63,7 +63,7 @@ nav {
 }
 
 nav a {
-    font-size: 12px;
+    font-size: 16px;
 }
 
 
@@ -165,7 +165,7 @@ footer .links a{
 }
 
 .contacts a {
-    font-size: 10px;
+    font-size: 15px;
     padding-bottom: 1em;
 }
 
@@ -223,6 +223,7 @@ footer .links a{
         display: none;
     }
      nav {
+         transition: 10s all;
          flex-direction: column;
      }
 
@@ -274,8 +275,13 @@ footer .links a{
    }
 
    footer .links a {
-       font-size: 12px;
+       font-size: 16px;
    }
+
+
+    footer .contacts a span{
+        font-size: 11px;
+    }
 
 
     .ref #logo_main {
@@ -292,4 +298,112 @@ footer .links a{
    .meta-data {
        display: none;
    }
+}
+
+
+.works{
+    padding-top: 40px;
+    font-size: 30px;
+    padding-bottom: 70px;
+}
+
+.item{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    border: 6px solid #181818;
+}
+
+
+.arrow{
+    height: 120px;
+    align-items: center;
+}
+
+.clothes{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+}
+@media(max-width: 1639px) {
+    .item{
+
+        width: 250px;
+        height: 250px;
+        transition: 1s all;
+    }
+
+}
+
+@media(max-width: 1481px) {
+
+    .arrow{
+        display: none;
+    }
+
+}
+
+@media(max-width: 1051px) {
+
+    .item{
+
+        width: 200px;
+        height: 200px;
+
+    }
+
+}
+
+@media(max-width: 701px) {
+
+
+    .clothes{
+
+        flex-direction: column;
+        justify-content: space-between;
+
+
+    }
+    .item{
+        margin-top: 20px;
+    }
+    .works{
+
+        padding-bottom: 0px;
+    }
+}
+
+
+
+@media(max-width: 992px) {
+    header, footer {
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+    .container {
+        padding-left: 50px;
+        padding-right: 50px;
+
+    }
+}
+
+@media(max-width: 768px) {
+    .links {
+        flex-basis: 50%;
+    }
+
+    #logo_main, .social {
+        flex-basis: 15%;
+    }
+
+}
+
+@media(max-width: 576px) {
+    header, footer {
+        padding-right: 25px;
+        padding-left: 25px;
+    }
 }
