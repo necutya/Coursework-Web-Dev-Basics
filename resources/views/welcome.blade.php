@@ -16,25 +16,28 @@
 <div class="container black-bg fullsize flex" id="pad">
     <i class="fas fa-bars hide white_font" id="menu_mobile"></i>
     <div class="main">
-        <h1>
-            Nakaz 27.10
-        </h1>
-        <h3>
-            Custom clothes<br>shop
-        </h3>
+        <a href="{{url('landing')}}" class="white_font">
+            <h1 class="text_logo_main">
+                Nakaz 27.10
+                <div class="hover"></div>
+            </h1>
+            <h3>
+                Custom clothes<br>shop
+            </h3>
+        </a>
     </div>
 
 
     <nav>
         <a href="#" id="logo_main"><img src="images/logo_white.png"></a>
         <div class="links white_font">
-            <a href="#"  class = "white_font">Акаунт</a>
-            <a href="#"  class = "white_font">Про нас</a>
-            <a href="#"  class = "white_font">Магазин</a>
+            <a href="{{url('account')}}"  class = "white_font">Акаунт<div class="hover"></div></a>
+            <a href="{{url('info')}}"  class = "white_font">Про нас<div class="hover"></div></a>
+            <a href="{{url('landing')}}"  class = "white_font">Магазин<div class="hover"></div></a>
         </div>
         <div class="social">
-            <a href="#" class = "white_font"><i class="fab fa-instagram "></i></a>
-            <a href="#" class = "white_font"> <i class="fab fa-telegram-plane"></i></a>
+            <a href="https://www.instagram.com/fucking.nakaz/" class = "white_font"><i class="fab fa-instagram "></i><div class="hover"></div></a>
+            <a href="#" class = "white_font"> <i class="fab fa-telegram-plane"></i><div class="hover"></div></a>
         </div>
     </nav>
 

@@ -21,3 +21,31 @@ Route::get('/', function () {
 Route::get('/landing', function () {
     return view('landing');
 });
+
+
+Route::get('/info', function () {
+    return view('info');
+});
+
+
+Route::get('/item', function () {
+    return view('item');
+});
+
+Route::get('/order', function () {
+    return view('order');
+});
+
+Route::get('/catalog', function () {
+    return view('catalog');
+});
+
+
+Route::get('/account', function () {
+    return view('account');
+});
+
+Route::get('/basket', function () {
+    return view('basket');
+});
+
