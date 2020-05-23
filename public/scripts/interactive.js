@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", () => {
     menu.style.display='none';
     basket_box.style.display='none';
 
-    login.style.display='none';
-    registration.style.display='none';
+    // login.style.display='none';
+    // registration.style.display='none';
 
     //Open/close menu
     document.querySelector('#menu_header').addEventListener('click', ()=>{
@@ -60,19 +60,23 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
+    //ATTENTION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    //PLEASE, DON'T CHECK IT
+    //GIVNOCODE IS HERE
+    //WRITTEN BY SAVCHENKO THARAS
 
+    var blur = document.createElement('blur');
+    blur.classList.add('blur');
     //Open/close redister CHANGE
     document.querySelector('#account_header').addEventListener('click', ()=>{
 
-        var blur = document.createElement('blur');
-        blur.classList.add('blur');
-        if(registration.style.display == 'none') {
-            registration.style.display = 'flex';
-            document.querySelector('main').append(blur);
-        }
-        else if (registration.style.display === 'flex') {
+        if (registration.style.display === 'flex') {
             registration.style.display = 'none';
             document.querySelector('blur').remove();
+        }
+        else {
+            registration.style.display = 'flex';
+            document.querySelector('main').append(blur);
         }
 
         registration.querySelector('#redirect_enter').addEventListener('click', ()=>{
@@ -96,6 +100,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+
+
+    if(registration.style.display==='flex' || login.style.display==='flex') {
+        document.querySelector('main').append(blur);
+    }
+    else {
+        document.querySelector('blur').remove();
+    }
+
+    registration.querySelector('#redirect_enter').addEventListener('click', ()=>{
+        registration.style.display = 'none';
+        login.style.display = 'flex';
+
+    });
+
+    login.querySelector('#redirect_registration').addEventListener('click', ()=>{
+        login.style.display = 'none';
+        registration.style.display = 'flex';
+
+    });
+
+    document.querySelectorAll('.cross').forEach(button => {
+        button.addEventListener('click', () => {
+            button.parentNode.parentNode.style.display = 'none';
+            document.querySelector('blur').remove();
+        });
+    });
 
 
 

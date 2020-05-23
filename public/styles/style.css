@@ -269,7 +269,7 @@ header {
     flex-grow: 0;
     background-color: #181818;
     padding: 15px 70px;
-    /*position: sticky;*/
+    position: fixed;
     width: 100%;
     z-index: 1000;
 }
@@ -277,7 +277,7 @@ header {
 
 main {
     flex-grow: 1;
-
+    padding-top: 50px;
 }
 
 footer {
@@ -369,9 +369,10 @@ footer .links a{
         padding-left: 25px;
     }
 
-    .links, .social i{
+    .links{
         display: none;
     }
+
     nav {
         transition: 10s all;
         flex-direction: column;
@@ -395,6 +396,7 @@ footer .links a{
     }
 
 
+
     #menu_mobile {
         position: absolute;
         display: inline;
@@ -405,10 +407,12 @@ footer .links a{
         transition: 1s all;
     }
 
-    #menu_header{
+    #menu_header, #basket_header{
         display: inline-block;
 
     }
+
+
     header nav{
         flex-direction: row;
     }
@@ -562,7 +566,7 @@ footer .links a{
     }
 
     #logo_main, .social {
-        flex-basis: 15%;
+        flex-basis: 30%;
     }
 
 }
@@ -650,6 +654,7 @@ footer .links a{
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-start;
+    transition: 1s all;
 }
 #shop {
     background-position: 50% 55%;
@@ -1401,9 +1406,7 @@ a:hover .hover{
     transition: opacity 1s ease-in-out;
 }
 
-/*Menu*/
 #menu {
-    /*margin-top: 50px;*/
     /*display: flex;*/
     display: none;
     flex-direction: column;
@@ -1418,6 +1421,7 @@ a:hover .hover{
     transition: 1s all;
     color: #FBFBFB;
 }
+/*Menu*/
 
 #menu h2{
     text-align: left;
@@ -1464,7 +1468,6 @@ a:hover .hover{
 #basket-box {
     /*margin-top: 50px;*/
     display: none;
-
     z-index: 999;
     position: fixed;
     right: 0;
@@ -1610,7 +1613,6 @@ a:hover .hover{
     background-color: #FBFBFB;
     padding: 0 0 0.5em 0;
     border-bottom: 2px solid #989F92;
-    transition: 0.5s all;
     color: #989F92;
 }
 
@@ -2055,4 +2057,14 @@ a:hover .hover{
     .basket-nav a {
         margin: 1em 0;
     }
+}
+
+
+.help_block {
+    color: red;
+    font-size: 10px;
+}
+
+.has_error {
+    border-bottom: 1px solid red;
 }

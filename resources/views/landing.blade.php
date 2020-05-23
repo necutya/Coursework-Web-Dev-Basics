@@ -3,25 +3,25 @@
     <div class="tile container" id="tile_main">
         <div id="tile_left">
             <div id="shop">
-                <a href="">
+                <a href="{{url('catalog')}}">
                     <h2>Shop</h2>
                 </a>
             </div>
             <div id="tile_down">
                 <div id="basket">
-                    <a href="">
+                    <a href="{{url('basket')}}">
                         <h2>Basket</h2>
                     </a>
                 </div>
                 <div id="about">
-                    <a href="">
+                    <a href="{{url('info')}}">
                         <h2>About</h2>
                     </a>
                 </div>
             </div>
         </div>
         <div id="account">
-            <a href="">
+            <a href="{{url('account')}}">
                 <h2>Account</h2>
             </a>
         </div>

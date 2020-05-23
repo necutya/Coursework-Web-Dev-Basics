@@ -29,7 +29,7 @@
             <div>
                 <p class="price_data">До сплати: 1000₴</p>
                 <p class="meta">Увага! До сплати не входить ціна за доставку.</p>
-                <a class="button" href="">Продовжити</a>
+                <a class="button" href="{{url('order')}}">Продовжити</a>
             </div>
         </div>
     </div>

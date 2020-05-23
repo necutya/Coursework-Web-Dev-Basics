@@ -13,39 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','MainController@welcome');
+
+Route::get('/landing','MainController@landing');
+
+Route::get('/info','MainController@info');
+
+Route::get('/item','MainController@item');
+
+Route::get('/order','MainController@order');
+
+Route::get('/catalog','MainController@catalog');
+
+Route::get('/account','MainController@account');
+
+Route::get('/basket','MainController@basket');
+
+Route::get('/admin','MainController@admin');
 
 
-Route::get('/landing', function () {
-    return view('landing');
-});
 
+Auth::routes();
 
-Route::get('/info', function () {
-    return view('info');
-});
-
-
-Route::get('/item', function () {
-    return view('item');
-});
-
-Route::get('/order', function () {
-    return view('order');
-});
-
-Route::get('/catalog', function () {
-    return view('catalog');
-});
-
-
-Route::get('/account', function () {
-    return view('account');
-});
-
-Route::get('/basket', function () {
-    return view('basket');
-});
-
+Route::get('/home', 'HomeController@index')->name('home');
