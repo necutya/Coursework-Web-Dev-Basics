@@ -15,14 +15,18 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 255);
+            $table->string('email', 255);
+            $table->string('phone', 60);
             $table->foreignId('user_id')->constrained()->onDelete('cascade')->onUpdate('cascade');
             $table->string('country', 255)->nullable(false);
             $table->string('city', 255)->nullable(false);
             $table->string('post_type', 255)->nullable(false);
             $table->string('department', 255)->nullable(false);
             $table->integer('price')->nullable(false);
-            $table->dateTime('date')->nullable(false);
-            $table->boolean('confirm')->default(false);
+            $table->text('comment')->nullable(true);
+            $table->string('payment_type', 60)->nullable(false);
+            $table->boolean('confirmed')->default(false);
             $table->timestamps();
         });
     }

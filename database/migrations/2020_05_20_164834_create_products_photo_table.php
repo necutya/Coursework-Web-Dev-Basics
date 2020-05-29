@@ -13,7 +13,7 @@ class CreateProductsPhotoTable extends Migration
      */
     public function up()
     {
-        Schema::create('products_photo', function (Blueprint $table) {
+        Schema::create('products_photos', function (Blueprint $table) {
             $table->id();
             $table->foreignId('product_id')->constrained()->onDelete('cascade');
             $table->string('url', 255)->nullable(false);
@@ -28,6 +28,6 @@ class CreateProductsPhotoTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('products_photo');
+        Schema::dropIfExists('products_photos');
     }
 }

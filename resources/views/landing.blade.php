@@ -30,11 +30,13 @@
     <div class="container">
         <h2 class="works">My last works</h2>
         <div class="clothes">
-            <img src="images/arr_right.png" class="arrow">
-            <img src="images/first.jpg" class="item">
-            <img src="images/second.jpg" class="item">
-            <img src="images/third.jpg" class="item">
-            <img src="images/arr_left.png" class="arrow">
+{{--            <img src="images/arrow_left.png" class="arrow">--}}
+            <div class="landing_items">
+                @foreach($random_products as $product)
+                    <img src="{{Storage::url($product->main_photo()->url)}}" class="item">
+                @endforeach
+            </div>
+{{--            <img src="images/arrow_right.png" class="arrow">--}}
         </div>
     </div>
 @endsection

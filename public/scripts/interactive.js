@@ -60,6 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
+
+
     //ATTENTION!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     //PLEASE, DON'T CHECK IT
     //GIVNOCODE IS HERE
@@ -105,7 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if(registration.style.display==='flex' || login.style.display==='flex') {
         document.querySelector('main').append(blur);
     }
-    else {
+    else if (document.querySelector('blur')){
         document.querySelector('blur').remove();
     }
 
@@ -129,5 +131,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
+    document.querySelectorAll('.reset').forEach(reset=>{
+       reset.addEventListener('click', ()=>{
+           // alert(reset);
+           reset.parentElement.style.display = 'none';
+           document.querySelector('#reset').style.display = 'flex';
+       })
+    });
 
 });

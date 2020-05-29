@@ -31,7 +31,7 @@
     <nav>
         <a href="#" id="logo_main"><img src="images/logo_white.png"></a>
         <div class="links white_font">
-            <a href="{{url('account')}}"  class = "white_font">Акаунт<div class="hover"></div></a>
+            <a href="{{url('landing')}}"  class = "white_font">Головна<div class="hover"></div></a>
             <a href="{{url('info')}}"  class = "white_font">Про нас<div class="hover"></div></a>
             <a href="{{url('landing')}}"  class = "white_font">Магазин<div class="hover"></div></a>
         </div>
